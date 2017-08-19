@@ -36,8 +36,8 @@ abstract class AbstractModule implements ModuleInterface
     {
         # If this file is already loaded then don't do anything
         if ($this->file) {
-            $path1 = $this->file->getPath() . "/" . $this->file->getFilename();
-            $path2 = $file->getPath() . "/" . $file->getFilename();
+            $path1 = $this->file->getFullPath();
+            $path2 = $file->getFullPath();
             if ($path1 === $path2) {
                 return $this;
             }
